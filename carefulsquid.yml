@@ -19,5 +19,5 @@
   - name: restart squid
     service:
       name: squid
-      enabled: restarted
+      state: restarted
 
