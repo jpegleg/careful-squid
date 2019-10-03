@@ -1,4 +1,4 @@
-# carefaul-squid
+# careful-squid
 Whitelist based squid proxy. 
 
 Scenario: you have a cloud or datacenter and you want funnel all outbound traffic through a proxy that only 
@@ -33,7 +33,7 @@ export https_proxy
 
 Or just within the app concept:
 
-curl https://carefuldata.com/api/specialrequests-1 --proxy your_proxy_server:3128
+curl https://carefuldata.com/ --proxy your_proxy_server:3128
 
 
 
