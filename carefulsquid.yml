@@ -10,6 +10,9 @@
 
   - name: deploy squid config
     template: src=/srv/squid.conf dest=/etc/squid/squid.conf
+    
+  - name: deploy squid whitelist
+    template: src=/srv/whitelist.txt dest=/etc/whitelist.txt
 
   - name: enable squid
     service:
