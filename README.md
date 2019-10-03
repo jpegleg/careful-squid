@@ -5,7 +5,7 @@ Scenario: you have a cloud or datacenter and you want funnel all outbound traffi
 allows outgoing requests from your cloud to certain locations.
 
 You can maintain a local firewall, or a firewall cloud, and perform these functions. But you might want to let your firewall do other work and let a more dynamic solution be used. With an easy to maintain text file as the whitelist, you can
-go wild with how you want to administrate it, and not be restricted to having to constantly edit firewall configs and access critical network devices just to update the whitelist.
+go wild with how you want to administrate it, and not be restricted to having to constantly edit firewall configs and access critical network devices just to update the outbound whitelist. Meanwhile, the firewalls elsewhere protect inbound perhaps.
 
 A solution is building squid proxy hosts that receive and restrict the traffic to https and only the whitelisted outbound.
 
