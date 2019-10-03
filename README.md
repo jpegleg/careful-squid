@@ -20,6 +20,17 @@ iptables -t nat -A POSTROUTING -o eth0 -s local-network -d your_proxy_server -j 
 iptables -A FORWARD -s local-network -d your_proxy_server -i eth0 -o eth0 -p tcp --dport 3128 -j ACCEPT
 
 
+Within the profile concept:
+
+http_proxy=http://user:password@proxyserver.com:3128
+
+https_proxy=https://user:password@proxyserver.com:3128
+
+export http_proxy
+
+export https_proxy
+
+
 Or just within the app concept:
 
 curl https://carefuldata.com/api/specialrequests-1 --proxy your_proxy_server:3128
