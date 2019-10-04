@@ -1,11 +1,9 @@
 ##################################################################################################
 #           (open)  Squid: open accel layer 4-7 proxy                                            # 
 #                                                                                                #
-#                                                                                                #      
+#           This version allows out to anywhere, no whitelist.                                   #      
 #                                                                                                #
-#  curl https://whitelistedplace.com/ --proxy carefulsquidproxy:3128                             #
-#           where whitelistedplace is an entry in /etc/whitelist.txt                             #
-#           and carefulsquidproxy is the squid proxy server/domain                               #
+#                                                                                                #
 ##################################################################################################
 
 
