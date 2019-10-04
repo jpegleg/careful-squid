@@ -9,7 +9,7 @@
       state: latest
   
   - name: make dump directory
-    shell: mkdir /var/spool/squid
+    shell: mkdir -p /var/spool/squid 2>/dev/null
 
   - name: deploy squid config
     template: src=/srv/squid.conf dest=/etc/squid/squid.conf
