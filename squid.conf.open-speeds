@@ -22,6 +22,17 @@ acl SSL_ports port 443
 acl Safe_ports port 443         # https
 acl Safe_ports port 1025-65535	# unregistered ports
 
+# Use acls to do QoS and restrict bandwith to specific 
+# domains at specific times..
+#
+#acl hog $somedomain
+#acl peakperiod time 10:00-16:00
+#delay_pools 1
+#delay_class 1 1
+#delay_parameters 1 56000/56000
+#delay_access 1 allow hog peakperiod
+
+
 acl CONNECT method CONNECT
 
 http_access deny !Safe_ports
