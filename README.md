@@ -1,5 +1,5 @@
 # careful-squid
-Whitelist based squid proxy. 
+Whitelist based squid proxy. Use the squid.conf.open-speeds if you don't want to use the whitelist.
 
 Scenario: you have a cloud or datacenter and you want funnel all outbound traffic through a proxy that only 
 allows outgoing requests from your cloud to certain locations.
