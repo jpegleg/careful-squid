@@ -12,7 +12,7 @@
     shell: mkdir -p /var/spool/squid 2>/dev/null
 
   - name: deploy squid config
-    template: src=/srv/squid.conf.open-speeds dest=/etc/squid/squid.conf
+    template: src=/srv/squid.conf.open-with-QOS dest=/etc/squid/squid.conf
    
   - name: enable squid
     service:
