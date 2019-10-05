@@ -1,8 +1,8 @@
 ##################################################################################################
-#           (open)  Squid: open accel layer 4-7 proxy                                            # 
+#       (open with quality of service bandwidth throttle)  Squid: open accel layer 4-7 proxy     # 
 #                                                                                                #
 #           This version allows out to anywhere, no whitelist.                                   #      
-#                                                                                                #
+#           Only blocking reserved ports and 80, leaving 443 and unregistered ports available.   #
 #                                                                                                #
 ##################################################################################################
 
