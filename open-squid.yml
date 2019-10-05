@@ -1,0 +1,25 @@
+---
+- hosts: carefulsquid
+  remote_user: root
+  tasks:
+
+  - name: install squid
+    yum:
+      name: squid
+      state: latest
+  
+  - name: make dump directory
+    shell: mkdir -p /var/spool/squid 2>/dev/null
+
+  - name: deploy squid config
+    template: src=/srv/squid.conf.open-speeds dest=/etc/squid/squid.conf
+   
+  - name: enable squid
+    service:
+      name: squid
+      enabled: yes
+
+  - name: restart squid
+    service:
+      name: squid
+      state: restarted
