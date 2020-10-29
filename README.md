@@ -73,7 +73,3 @@ echo "192.168.1.10" >> /srv/allow_list.txt
 
 /usr/bin/ansible-playbook --user root -i /someplace/yourinventoryfile ./carefulsquid.yml
 
-
-# to force the traffic for the user through the proxy, or at least make it default
-
-cat default_profile >> /etc/profile
