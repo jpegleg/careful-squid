@@ -1,7 +1,7 @@
 ##################################################################################################
-#       (open with quality of service bandwidth throttle)  Squid: open accel layer 4-7 proxy     # 
+#       (open with quality of service bandwidth throttle)  Squid: open accel layer 4-7 proxy     #
 #                                                                                                #
-#           This version allows out to anywhere, no whitelist.                                   #      
+#           This version allows out to anywhere, no allow_list.                                   #
 #           Only blocking reserved ports and 80, leaving 443 and unregistered ports available.   #
 #                                                                                                #
 ##################################################################################################
@@ -18,9 +18,9 @@ acl localnet src fe80::/10              # RFC 4291 link-local (directly plugged)
 
 acl SSL_ports port 443
 acl Safe_ports port 443         # https
-acl Safe_ports port 1025-65535	# unregistered ports
+acl Safe_ports port 1025-65535  # unregistered ports
 
-# Use acls to do QoS and restrict bandwith to specific 
+# Use acls to do QoS and restrict bandwith to specific
 # domains at specific times..
 #
 #acl hog $somedomain
@@ -49,7 +49,7 @@ http_port 3128
 
 coredump_dir /var/spool/squid
 
-refresh_pattern ^ftp:		1440	20%	10080
-refresh_pattern ^gopher:	1440	0%	1440
+refresh_pattern ^ftp:           1440    20%     10080
+refresh_pattern ^gopher:        1440    0%      1440
 refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
-refresh_pattern .               0       20%     4320
+refresh_pattern .               0       20%     432
