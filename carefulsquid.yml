@@ -7,15 +7,15 @@
     yum:
       name: squid
       state: latest
-  
+
   - name: make dump directory
     shell: mkdir -p /var/spool/squid 2>/dev/null
 
   - name: deploy squid config
     template: src=/srv/squid.conf dest=/etc/squid/squid.conf
-    
-  - name: deploy squid whitelist
-    template: src=/srv/whitelist.txt dest=/etc/whitelist.txt
+
+  - name: deploy squid allow_list
+    template: src=/srv/allow_list.txt dest=/etc/allow_list.txt
 
   - name: enable squid
     service:
@@ -27,3 +27,4 @@
       name: squid
       state: restarted
 
+...
