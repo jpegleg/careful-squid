@@ -72,3 +72,8 @@ echo "192.168.1.10" >> /srv/allow_list.txt
 # run an ansible playbook to install squid, keep it updated, deploy the config and allow_list, enable automatic start up, and restart the service
 
 /usr/bin/ansible-playbook --user root -i /someplace/yourinventoryfile ./carefulsquid.yml
+
+
+# to force the traffic for the user through the proxy, or at least make it default
+
+cat default_profile >> /etc/profile
