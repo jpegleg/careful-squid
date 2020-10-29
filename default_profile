@@ -1,3 +1,17 @@
+###############################################################################
+# cat default_profile >> /etc/profile                                         #
+# make the default behavior to route through the proxy on the local server    #
+#                                                                             #
+# Careful Squid local default  profile                                        #
+#                                                                             #
+# To use on a host that isn't the squid server, change localhost              #
+# to the squid server name...                                                 #
+#                                                                             #
+#    http_proxy=mysquidserver:3128                                            #
+#    https_proxy=mysquidserver:3128                                           #
+#                                                                             #
+###############################################################################               
+
 http_proxy=localhost:3128
 https_proxy=localhost:3128
 export http_proxy
