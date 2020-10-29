@@ -1,0 +1,8 @@
+---
+- hosts: carefulsquid
+  remote_user: root
+  tasks:
+
+  - name: deploy squid allow_list
+    template: src=/srv/allow_list.txt dest=/etc/allow_list.txt
+...

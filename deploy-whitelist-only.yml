@@ -1,7 +1,0 @@
----
-- hosts: carefulsquid
-  remote_user: root
-  tasks:
-  
-  - name: deploy squid whitelist
-    template: src=/srv/whitelist.txt dest=/etc/whitelist.txt
