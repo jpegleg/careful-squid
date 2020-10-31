@@ -11,15 +11,6 @@ A solution is building squid proxy hosts that receive and restrict the traffic t
 
 You could enforce it strictly with a NAT or iptables, or you can use user profiles, or just build in the proxy into the application.
 
-iptables example concept:
-
-iptables -t nat -A PREROUTING -i eth0 -s ! your_proxy_server -p tcp --dport 80 -j DNAT --to your_proxy_server:3128
-
-iptables -t nat -A POSTROUTING -o eth0 -s local-network -d your_proxy_server -j SNAT --to iptables-box
-
-iptables -A FORWARD -s local-network -d your_proxy_server -i eth0 -o eth0 -p tcp --dport 3128 -j ACCEPT
-
-
 Within the profile concept:
 
 http_proxy=http://user:password@proxyserver.com:3128
